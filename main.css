@@ -1,0 +1,232 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.container-flex{
+    display: flex;
+}
+
+header,footer{
+    background-color:bisque;
+    padding-top: 16px;
+    color: #6d6767;
+}
+
+header > .container,
+footer > .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 16px;
+}
+
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #6d6767;
+    padding: 1em;
+    font-size: 1.2em;
+}
+
+#sobre img{
+    max-width: 30em;
+    margin-right: 2em;
+}
+
+section{
+    padding-top: 2em;
+}
+
+section h2{
+    margin-bottom: 16px;
+}
+
+#title-brinquedos{
+    border-top: 2px solid #6d6767;
+    padding-top: 0.8em;
+}
+
+.lista-brinquedos{
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.lista-brinquedos li{
+    list-style: none;
+    max-width: 24%;
+    margin-bottom: 24px;
+    border: 1px solid #6d6767;
+    border-radius: 5px;
+    padding: 8px;
+}
+
+.lista-brinquedos li img{
+    max-width: 100%;
+;
+}
+
+.lista-brinquedos li h3{
+    margin: 16px 0;
+}
+
+.lista-brinquedos li p{
+    word-spacing: -1px;
+    margin-bottom: 1em;
+}
+
+.lista-brinquedos li button{
+    display: block;
+    width: 100%;
+    padding: 8px;
+    border: none;
+    background-color:bisque;
+    color: #6d6767;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+@media screen and (max-width: 767px) {
+    .container {
+        max-width: 100%;
+        padding: 0 16px;
+    }
+
+    header > .container, footer > .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav a {
+        font-size: 1em;
+        padding: 0.5em;
+    }
+
+    #sobre img {
+        max-width: 100%;
+        margin: 0 auto 16px auto;
+    }
+
+    #sobre .container-flex {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .lista-brinquedos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .lista-brinquedos li {
+        max-width: 90%;
+        margin-bottom: 16px;
+    }
+
+    .lista-brinquedos li button {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+    .container {
+        max-width: 90%;
+        padding: 0 16px;
+    }
+
+    header > .container,
+    footer > .container {
+        justify-content: space-around;
+    }
+
+    header nav a {
+        font-size: 1.5em;
+        padding: 0.5em;
+    }
+
+    #sobre img {
+        max-width: 100%;
+        margin: 0 auto 16px auto;
+    }
+
+    #sobre h2{
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 2em
+    }
+
+    #sobre .container-flex {
+        flex-wrap: wrap;
+        text-align: center;
+        font-size: 1.4em;
+    }
+
+    #sobre div {
+        width: 100%;
+    }
+
+    #brinquedos h2{
+        font-size: 3em;
+        font-family: 'Courier New', Courier, monospace;
+        text-align: center;
+    }
+
+    .lista-brinquedos {
+        justify-content: center;
+        gap: 2%;
+    }
+
+    .lista-brinquedos li {
+        max-width: 45%;
+        margin-bottom: 16px;
+    }
+
+    .lista-brinquedos li img{
+        max-width: 18,75em;
+        width: 100%;
+        margin-bottom: 16px;
+    }
+
+    .lista-brinquedos li h3 {
+        text-align: center;
+        font-size: 2em;
+        font-family: 'Courier New', Courier, monospace;
+    }
+
+    .lista-brinquedos li p {
+        font-size: 1.5em;
+    }
+
+    .lista-brinquedos li button {
+        font-size: 1em;
+    }
+
+    footer {
+        text-align: center;
+        padding: 16px 0;
+    }
+
+    #direitos {
+        font-size: 1.5em;
+    }
+}
